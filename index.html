@@ -87,7 +87,7 @@ The DNSCrypt server can run on the router, along with a modern DNS resolver. Cli
 <pre>
     |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
 
-dnscrypt client               dnscrypt server
+         dnscrypt client               dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP --------> the Internet
 
     |--------- Secured by DNSCrypt ---------| |------------- Secured by DNSSEC --------------|
@@ -105,7 +105,7 @@ For maximum protection, DNSCrypt client can run on every client device:
 <pre>
     |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
 
-  dnscrypt client                                                                                 dnscrypt server
+         dnscrypt client                                                                                 dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> the Internet --------> public DNS resolver
 
     |----------------------------------- Secured by DNSCrypt -------------------------------------------|
@@ -135,7 +135,7 @@ Finally, you can run your own DNSCrypt server on a remote, trusted network, to g
 <pre>
     |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
 
-  dnscrypt client                                                                                 dnscrypt server
+        dnscrypt client                                                                                 dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> the Internet --------> private DNS resolver
 
     |----------------------------------- Secured by DNSCrypt -------------------------------------------|

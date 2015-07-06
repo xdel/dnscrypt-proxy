@@ -278,10 +278,13 @@ Multiple dnscrypt-proxy instances can run simultaneously, with different configu
 The DNSCrypt client proxy is not a DNS cache. This means that incoming queries will not be cached and every single query will require a round-trip to the upstream resolver.
 </p>
 <p>
-For optimal performance, the recommended way of running DNSCrypt is to run it as a forwarder for a local DNS cache, like unbound or powerdns-recursor.
+For optimal performance, the recommended way of running DNSCrypt is to run it as a forwarder for a local DNS cache, such as unbound or powerdns-recursor.
 </p>
 <p>
-Both can safely run on the same machine as long as they are listening to different IP addresses (preferred) or different ports.
+A caching resolver can also provide high availability, by forwarding queries to multiple upstream DNSCrypt client proxies, configured with different providers.
+</p>
+<p>
+dnscrypt-proxy instances and the caching resolver can safely run on the same machine as long as they are listening to different IP addresses or different ports.
 </p>
 <p>
 If your DNS cache is unbound, all you need is to edit the unbound.conf file and add the following lines at the end of the server section:
@@ -292,17 +295,29 @@ do-not-query-localhost: no
 forward-zone:
   name: "."
   forward-addr: 127.0.0.1@40
+  forward-addr: 127.0.0.1@41
 </pre>
 <p>
 The first line is not required if you are using different IP addresses instead of different ports.
+The <code>forward-addr</code> lines indicate addresses and ports of dnscrypt clients to use as upstream resolvers.
 </p>
 <p>
-Then start dnscrypt-proxy, telling it to use a specific port (40, in this example):
+Then, start the client proxies, listening to local ports (40 and 41, using dnscrypt.org-fr and dnscrypt.eu-nl public resolvers in this example):
 </p>
 <pre>
-# dnscrypt-proxy --ephemeral-keys --local-address=127.0.0.1:40 --daemonize
+# dnscrypt-proxy -R dnscrypt.org-fr --ephemeral-keys --local-address=127.0.0.1:40 --daemonize
+# dnscrypt-proxy -R dnscrypt.eu-nl --ephemeral-keys --local-address=127.0.0.1:41 --daemonize
 </pre>
-
+<p>
+Pay attention to the fact that some resolvers do not support the DNS security extensions (DNSSEC).
+</p>
+<p>
+If Unbound is configured to perform DNSSEC validation in combination with an upstream server that does not support DNSSEC, queries will fail.
+Either use only DNSCrypt resolvers with support for DNSSEC, or disable DNSSEC support in Unbound by commenting out the <code>auto-trust-anchor-file</code> line in its configuration.
+</p>
+<p>
+A local caching resolver can also be extremely useful to forward queries for CDNs or internal domains to a specific resolver.
+</p>
 <h2>
 <a id="ipv6" class="anchor" href="#ipv6" aria-hidden="true"><span class="octicon octicon-link"></span></a>IPv6</h2>
 <p>

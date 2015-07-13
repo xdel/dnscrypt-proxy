@@ -204,9 +204,13 @@ brew install dnscrypt-proxy --with-plugins
 <a id="dnscrypt-ios" class="anchor" href="#dnscrypt-ios" aria-hidden="true"><span class="octicon octicon-link"></span></a>DNSCrypt for iOS</h2>
 <p>
 For jailbroken iOS device, <a href="http://modmyi.com/cydia/com.guizmo.dns">GuizmoDNS</a> is an app to change DNS settings (for 3G/4G and Wifi), with support for DNSCrypt.
+It is available on Cydia. The command-line <code>dnscrypt-proxy</code> client is also available on Cydia.
 </p>
 <p>
 The DNSCrypt source code can also be compiled out of the box for iOS devices, using the provided <code>dist-build/ios.sh</code> script.
+</p>
+<p>
+With the introduction of the Network Extension Framework in iOS 9, it may be possible to write a DNSCrypt client app that would run everywhere, without requiring a jailbroken device.
 </p>
 
 <h2>
@@ -215,7 +219,14 @@ The DNSCrypt source code can also be compiled out of the box for iOS devices, us
 The DNSCrypt source code can be compiled for Android devices, using the provided <code>dist-build/android*.sh</code> scripts.</a>
 </p>
 <p>
-Running it requires a rooted device.
+Running it requires a rooted device. Related links:
+<ul>
+<li><a href="https://github.com/jedisct1/dnscrypt-proxy/issues/98#issuecomment-62636551" target="_blank">Starting the daemon on Android</a></li>
+<li><a href="http://forum.xda-developers.com/showthread.php?t=2793092" target="_blank">How to install DNSCrypt on Android</a>
+</ul>
+</p>
+<p>
+DNSCrypt is also apparently available on <a href="http://review.cyanogenmod.org/#/q/status:open+branch:cm-12.1+topic:dnscrypt" target="_blank">Cyanogen</a>.
 </p>
 
 <h2>

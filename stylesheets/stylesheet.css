@@ -243,3 +243,12 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+h1 img {
+    max-width: 255px;
+    max-height: 175px;
+}
+
+h2 {
+    margin:0 ;
+}

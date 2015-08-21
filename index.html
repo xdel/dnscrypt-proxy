@@ -58,7 +58,7 @@ A constantly updated <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/ma
 </p>
 
 <p>
-If you are running your own public DNS resolver in order to help make the Internet a more secure and less censored place, please submit a <a href="https://github.com/jedisct1/dnscrypt-proxy/pulls">pull request</a> to have your resolver added to the <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/dnscrypt-resolvers.csv">list of public DNS resolvers</a>.
+If you are running your own public DNS resolver in order to help make the Internet a more secure place, please submit a <a href="https://github.com/jedisct1/dnscrypt-proxy/pulls">pull request</a> to have your resolver added to the <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/dnscrypt-resolvers.csv">list of public DNS resolvers</a>.
 </p>
 
 <h2>
@@ -86,7 +86,7 @@ The DNSCrypt server can run on the router, along with a modern DNS resolver. Cli
 </p>
 
 <pre>
-    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
+    |----- Most vulnerable to attacks ------|          |-- Most vulnerable to modification --|
 
          dnscrypt client               dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP --------> the Internet
@@ -104,7 +104,7 @@ For maximum protection, DNSCrypt client can run on every client device:
 </p>
 
 <pre>
-    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
+    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to modification --|
 
          dnscrypt client                                                                                 dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> the Internet --------> public DNS resolver
@@ -119,7 +119,7 @@ Or if you totally trust the local network, the DNSCrypt client can run on the ro
 </p>
 
 <pre>
-    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
+    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to modification --|
 
                                         dnscrypt client                                                  dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> the Internet -------->  public DNS resolver
@@ -130,11 +130,11 @@ Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> 
 </pre>
 
 <p>
-Finally, you can run your own DNSCrypt server on a remote, trusted network, to get the best possible protection against censorship, while having full control over what the resolver is logging:
+Finally, you can run your own DNSCrypt server on a remote, trusted network, to get full control over what the resolver is doing and logging:
 </p>
 
 <pre>
-    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to censorship --|
+    |----- Most vulnerable to attacks ------|            |-- Most vulnerable to modification --|
 
         dnscrypt client                                                                                 dnscrypt server
 Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> the Internet --------> private DNS resolver
@@ -265,7 +265,7 @@ For OPNsense users, here is a really good guide on <a href="http://ramirosalas.c
 </p>
 <h2>
 <a id="dnscrypt-proxy" class="anchor" href="#dnscrypt-proxy" aria-hidden="true"><span class="octicon octicon-link"></span></a>dnscrypt-proxy</h2>
-<p><a href="https://github.com/chengr28/Pcap_DNSProxy">Pcap_DNSProxy</a> is a very fast DNS proxy to bypass censorship, especially from the Great Firewall of China. It includes a DNSCrypt client implementation.
+<p><a href="https://github.com/chengr28/Pcap_DNSProxy">Pcap_DNSProxy</a> is a very fast DNS proxy. It includes a DNSCrypt client implementation.
 </p>
 <p>
 But the reference client DNSCrypt implementation is <a href="http://download.dnscrypt.org/dnscrypt-proxy/">dnscrypt-proxy</a>.

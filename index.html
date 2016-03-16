@@ -23,9 +23,9 @@
       <a href="#dnscrypt-routers" class="btn">DNSCrypt for routers</a>
       <br/>
       <a href="#dnscrypt-server" class="btn">DNSCrypt server source code</a>
-      <a href="https://download.dnscrypt.org/dnscrypt-proxy/" class="btn" target="_blank">DNSCrypt client source code</a>
-      <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/DNSCRYPT-V2-PROTOCOL.txt" class="btn" target="_blank">Protocol specification</a>
-      <a href="https://github.com/jedisct1/dnscrypt-proxy/issues" class="btn" target="_blank">Support</a>
+      <a href="https://download.dnscrypt.org/dnscrypt-proxy/" class="btn" target="_blank" rel="noopener">DNSCrypt client source code</a>
+      <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/DNSCRYPT-V2-PROTOCOL.txt" class="btn" target="_blank" rel="noopener">Protocol specification</a>
+      <a href="https://github.com/jedisct1/dnscrypt-proxy/issues" class="btn" target="_blank" rel="noopener">Support</a>
       <br/>
       Current stable DNSCrypt client version: <strong>1.6.1</strong>
       <br/>
@@ -163,7 +163,7 @@ Laptop/workstation/phone/tablet --------> home router --------> ISP ----------> 
 This remains the best option for advanced users, especially since it supports the same plugins as other platforms.</p>
 
 <p>
-See <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/README-WINDOWS.markdown" target="_blank">using DNSCrypt on Windows</a> to get started with the command-line tool.
+See <a href="https://github.com/jedisct1/dnscrypt-proxy/blob/master/README-WINDOWS.markdown" target="_blank" rel="noopener">using DNSCrypt on Windows</a> to get started with the command-line tool.
 </p>
 
 <p>
@@ -179,8 +179,8 @@ In addition, the following user interfaces are available:
 Recommended guides for getting started with the DNSCrypt client on
 Windows:
 <ul>
-  <li><a href="https://dominustemporis.com/2014/05/dnscrypt-on-windows-update/" target="_blank">DNSCrypt On Windows</a>
-  <li><a href="http://utekno.com/cara-menggunakan-dnscrypt-windows-11451" target="_blank">Cara menggunakan DNSCrypt di Windows</a> (Indonesian)</li>
+  <li><a href="https://dominustemporis.com/2014/05/dnscrypt-on-windows-update/" target="_blank" rel="noopener">DNSCrypt On Windows</a>
+  <li><a href="http://utekno.com/cara-menggunakan-dnscrypt-windows-11451" target="_blank" rel="noopener">Cara menggunakan DNSCrypt di Windows</a> (Indonesian)</li>
 </ul>
 </p>
 
@@ -217,7 +217,7 @@ For jailbroken iOS device, <a href="http://modmyi.com/cydia/com.guizmo.dns">Guiz
 It is available on Cydia. The command-line <code>dnscrypt-proxy</code> client is also available on Cydia.
 </p>
 <p>
-However, the version on Cydia might not be the latest one. Official pre-compiled binaries of the latest version are available on the <a href="https://download.dnscrypt.org/dnscrypt-proxy/" target="_blank">DNSCrypt download</a> page.
+However, the version on Cydia might not be the latest one. Official pre-compiled binaries of the latest version are available on the <a href="https://download.dnscrypt.org/dnscrypt-proxy/" target="_blank" rel="noopener">DNSCrypt download</a> page.
 </p>
 <p>
 The DNSCrypt source code can also be compiled out of the box for iOS devices, using the provided <code>dist-build/ios.sh</code> script.
@@ -230,10 +230,10 @@ With the introduction of the Network Extension Framework in iOS 9, it may be pos
 <a id="dnscrypt-android" class="anchor" href="#dnscrypt-android" aria-hidden="true"><span class="octicon octicon-link"></span></a>DNSCrypt for Android</h2>
 
 <p>
-Running DNSCrypt on Android currently requires a rooted device. If you don't know how to root an Android device, the <a href="http://forum.xda-developers.com/" target="_blank">xda-developers</a> forum is a good place to start.
+Running DNSCrypt on Android currently requires a rooted device. If you don't know how to root an Android device, the <a href="http://forum.xda-developers.com/" target="_blank" rel="noopener">xda-developers</a> forum is a good place to start.
 </p>
 <ul>
-<li>Start by downloading a precompiled <a href="https://download.dnscrypt.org/dnscrypt-proxy/" target="_blank">dnscrypt-proxy package for Android</a>.</li>
+<li>Start by downloading a precompiled <a href="https://download.dnscrypt.org/dnscrypt-proxy/" target="_blank" rel="noopener">dnscrypt-proxy package for Android</a>.</li>
 <li>If you want to change the DNSCrypt resolver to use, unzip the archive, edit the <code>RESOLVER_NAME</code> variable in <code>system/etc/init.d/99dnscrypt</code>. Keep the content as a ZIP file, with the original structure.</li>
 <li>Upload the ZIP file to the device, into <code>/sdcard</code> or any location you can write to.</li>
 <li>Make sure that you have a custom recovery such as TWRP or CWM. The easiest way is to download and install <strong>TWRP Manager</strong> from the Google Play Store. Reboot in recovery mode and install the ZIP file.</li>
@@ -244,33 +244,33 @@ Running DNSCrypt on Android currently requires a rooted device. If you don't kno
 </ul>
 Relevant discussions:
 <ul>
-<li><a href="https://github.com/jedisct1/dnscrypt-proxy/issues/98#issuecomment-62636551" target="_blank">Starting the daemon on Android</a></li>
-<li><a href="http://forum.xda-developers.com/showthread.php?t=2793092" target="_blank">How to install DNSCrypt on Android</a>
+<li><a href="https://github.com/jedisct1/dnscrypt-proxy/issues/98#issuecomment-62636551" target="_blank" rel="noopener">Starting the daemon on Android</a></li>
+<li><a href="http://forum.xda-developers.com/showthread.php?t=2793092" target="_blank" rel="noopener">How to install DNSCrypt on Android</a>
 </ul>
 </p>
 <p>
 The dnscrypt-proxy source code can be cross-compiled for Android using the provided <code>dist-build/android*.sh</code> scripts.</a>
 </p>
 <p>
-It might also soon be part of the <a href="http://review.cyanogenmod.org/#/q/status:open+branch:cm-12.1+topic:dnscrypt" target="_blank">Cyanogen Mod</a>.
+It might also soon be part of the <a href="http://review.cyanogenmod.org/#/q/status:open+branch:cm-12.1+topic:dnscrypt" target="_blank" rel="noopener">Cyanogen Mod</a>.
 </p>
 
 <h2>
 <a id="dnscrypt-routers" class="anchor" href="#dnscrypt-routers" aria-hidden="true"><span class="octicon octicon-link"></span></a>DNSCrypt for routers</h2>
 <p>
-Modern open router firmwares such as <a href="http://tomato.groov.pl/" target="_blank">Tomato Shibby</a> and other Tomato variants include a DNSCrypt client out-of-the box.
+Modern open router firmwares such as <a href="http://tomato.groov.pl/" target="_blank" rel="noopener">Tomato Shibby</a> and other Tomato variants include a DNSCrypt client out-of-the box.
 </p>
 <p>
-The dnscrypt-proxy client is also available on OpenWRT which has a wiki page on using <a href="http://wiki.openwrt.org/inbox/dnscrypt" target="_blank">DNSCrypt on OpenWRT</a>.
+The dnscrypt-proxy client is also available on OpenWRT which has a wiki page on using <a href="http://wiki.openwrt.org/inbox/dnscrypt" target="_blank" rel="noopener">DNSCrypt on OpenWRT</a>.
 </p>
 <p>
-dnscrypt-proxy can also be found in <a href="https://github.com/Entware/entware" target="_blank">Entware</a>.
+dnscrypt-proxy can also be found in <a href="https://github.com/Entware/entware" target="_blank" rel="noopener">Entware</a>.
 </p>
 <p>
 It can also be compiled for any Linux-based target, running an Intel, Mips or ARM CPU.
 </p>
 <p>
-For OPNsense users, here is a really good guide on <a href="http://ramirosalas.com/installing-dnscrypt-in-opnsense.html" target="_blank">DNSCrypt on OPNsense</a>.
+For OPNsense users, here is a really good guide on <a href="http://ramirosalas.com/installing-dnscrypt-in-opnsense.html" target="_blank" rel="noopener">DNSCrypt on OPNsense</a>.
 </p>
 <h2>
 <a id="dnscrypt-proxy" class="anchor" href="#dnscrypt-proxy" aria-hidden="true"><span class="octicon octicon-link"></span></a>dnscrypt-proxy</h2>
@@ -334,7 +334,7 @@ Multiple dnscrypt-proxy instances can run simultaneously, with different configu
 
 <h3>DNSCrypt-Loader</h3>
 <p>
-    <a href="https://github.com/gortcodex/dnscrypt-loader" target="_blank">DNSCrypt-Loader</a> is a console-based tool to manage the DNSCrypt proxy client on Linux.
+    <a href="https://github.com/gortcodex/dnscrypt-loader" target="_blank" rel="noopener">DNSCrypt-Loader</a> is a console-based tool to manage the DNSCrypt proxy client on Linux.
 </p>
 <p>
     It requires a minimal amount of dependencies, has an always up-to-date list of resolvers, and can automatically change the DNS settings to use DNSCrypt.

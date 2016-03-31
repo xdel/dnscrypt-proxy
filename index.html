@@ -485,6 +485,18 @@ This plugin logs the DNS queries received by the proxy. The logs are stored in a
       </footer>
 
     </section>
-    <script src="https://resolver.dnscrypt.org" async=async defer=defer></script>
+    <script>
+    (function() {
+        var xhr;
+        try {
+            xhr = new ActiveXObject('Microsoft.XMLHTTP');
+        } catch (e) {
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open('HEAD', 'https://resolver.dnscyrpt.org');
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.send(null);
+    })();
+    </script>
   </body>
 </html>

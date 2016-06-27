@@ -298,19 +298,19 @@ Having a dedicated system user, with no privileges and with an empty home direct
 Most users just want to start the client proxy like this:
 </p>
 <pre>
-sudo dnscrypt-proxy --ephemeral-keys --resolver-name=&lt;resolver name&gt;
+sudo dnscrypt-proxy --resolver-name=&lt;resolver name&gt;
 </pre>
 <p>
 Or to run it as a background process:
 </p>
 <pre>
-sudo dnscrypt-proxy --ephemeral-keys --resolver-name=&lt;resolver name&gt; --daemonize
+sudo dnscrypt-proxy --resolver-name=&lt;resolver name&gt; --daemonize
 </pre>
 <p>
 Replace <code>&lt;resolver name&gt;</code> with the name of the resolver you want to use (the first column in the <a href="#public-resolvers">list of public resolvers</a>).
 For example:
 <code>
-sudo dnscrypt-proxy --ephemeral-keys --resolver-name=dnscrypt.org-fr --daemonize
+sudo dnscrypt-proxy --resolver-name=dnscrypt.org-fr --daemonize
 </code>
 </p>
 <p>
@@ -323,7 +323,7 @@ Given such a setup, in order to actually start using DNSCrypt, you need to confi
 Other common command-line switches include:
 <ul>
     <li>--daemonize in order to run the server as a background process.</li>
-    <li>--ephemeral-keys: improve privacy by using an ephemeral public key for each query. Recommended if you are not using your own server.</li>
+    <li>--ephemeral-keys: improve privacy by using an ephemeral public key for each query. Recommended if you are not using your own server, any the remote server is logging your activity, and your client IP address is frequently changing. Not enabled by default because it may be slow, especially on non-Intel CPUs.</li>
     <li>--local-address=&lt;ip&gt;[:port] in order to locally bind a different IP address than 127.0.0.1</li>
     <li>--logfile=&lt;file&gt; in order to write log data to a dedicated file. By default, logs are sent to stdout if the server is running in foreground, and to syslog if it is running in background.</li>
     <li>--max-active-requests=&lt;count&gt; to set the maximum number of active requests. The default value is 250.</li>
@@ -377,8 +377,8 @@ The <code>forward-addr</code> lines indicate addresses and ports of dnscrypt cli
 Then, start the client proxies, listening to local ports (40 and 41, using dnscrypt.org-fr and dnscrypt.eu-nl public resolvers in this example):
 </p>
 <pre>
-# dnscrypt-proxy -R dnscrypt.org-fr --ephemeral-keys --local-address=127.0.0.1:40 --daemonize
-# dnscrypt-proxy -R dnscrypt.eu-nl --ephemeral-keys --local-address=127.0.0.1:41 --daemonize
+# dnscrypt-proxy -R dnscrypt.org-fr --local-address=127.0.0.1:40 --daemonize
+# dnscrypt-proxy -R dnscrypt.eu-nl --local-address=127.0.0.1:41 --daemonize
 </pre>
 <p>
 Pay attention to the fact that some resolvers do not support the DNS security extensions (DNSSEC).
@@ -396,7 +396,7 @@ A local caching resolver can also be extremely useful to forward queries for CDN
 IPv6 is fully supported. IPv6 addresses with a port number should be specified as [ip]:port
 </p>
 <pre>
-# dnscrypt-proxy --ephemeral-keys --local-address='[::1]:40' --daemonize
+# dnscrypt-proxy --local-address='[::1]:40' --daemonize
 </pre>
 
 <h2>

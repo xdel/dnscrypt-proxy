@@ -44,7 +44,7 @@ It uses cryptographic signatures to verify that responses originate from the cho
 
 <p>DNSCrypt is not affiliated with any company or organization, is a documented protocol using highly secure, non-NIST cryptography, and its reference implementations are open source and released under a very liberal license.</p>
 
-<p>Please note that DNSCrypt is not a replacement for a VPN, as it only authenticates DNS traffic, and doesn't prevent "DNS leaks", or third-party DNS resolvers from logging your activity.</p>
+<p>Please note that DNSCrypt is not a replacement for a VPN, as it only authenticates DNS traffic, and doesn't prevent "DNS leaks", or third-party DNS resolvers from logging your activity. The TLS protocol, as used in HTTPS and HTTP2, also leaks leaks websites host names in plain text, rendering DNSCrypt useless as a way to hide this information.</p>
 
 <h2>
 <a id="public-resolvers" class="anchor" href="#public-resolvers" aria-hidden="true"><span class="octicon octicon-link"></span></a>DNSCrypt-compatible public resolvers</h2>

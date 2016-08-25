@@ -448,7 +448,7 @@ In order to filter IP addresses, the list of IPs has to be put into a text file,
 The plugin can then be enabled with:
 </p>
 <pre>
-# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,ips=&lt;ips file name&gt;
+# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,--ips=&lt;ips file name&gt;
 </pre>
 <p>
 Comments starting with <code>#</code> are allowed.
@@ -457,7 +457,7 @@ Comments starting with <code>#</code> are allowed.
 Lists of domain names can also be blocked as well. Put the list into a text file, one domain per line, and enable the plugin with:
 </p>
 <pre>
-# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,domains=&lt;domains file name&gt;
+# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,--domains=&lt;domains file name&gt;
 </pre>
 <p>
 Domains can include wildcards (<code>*</code>) in order to match patterns. For example <code>*sex*</code> will match any name that contains the <code>sex</code> substring, and <code>ads.*</code> will match anything starting with <code>ads.</code>
@@ -472,7 +472,7 @@ The Internet has plenty of free feeds of IP addresses and domain names used for 
 Lists of IPs and domains can be used simultaneously:
 </p>
 <pre>
-# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,domains=&lt;domains file name&gt;,ips=&lt;ips file name&gt;
+# dnscrypt-proxy ... --plugin=example-ldns-blocking.la,--domains=&lt;domains file name&gt;,--ips=&lt;ips file name&gt;
 </pre>
 
 <h3>Logging plugin</h3>
